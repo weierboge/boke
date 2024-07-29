@@ -50,11 +50,6 @@ title: 关于我
         }
         .social-icons a {
             margin: 0 10px;
-            color: #333; /* 图标颜色 */
-            font-size: 24px; /* 增加图标大小 */
-        }
-        .social-icons a:hover {
-            color: #666; /* 鼠标悬停时图标颜色 */
         }
         .footer {
             background: #f8f8f8;
@@ -66,6 +61,8 @@ title: 关于我
     </style>
 </head>
 <body>
+    <header>
+        <h1>{{ site.title }}</h1>
         <nav>
             <ul>
                 <li><a href="{{ '/' | relative_url }}">主页</a></li>
@@ -75,10 +72,9 @@ title: 关于我
         </nav>
     </header>
     <main>
-        <h2>{{ page.title }}</h2>
         <p>这里是关于我的一些信息。你可以添加一些个人简介、兴趣、爱好等。</p>
         <div class="social-icons">
-            <a href="https://www.zhihu.com/people/wei-shi-bo" target="_blank"><i class="fab fa-zhihu"></i></a>
+            <a href="https://www.zhihu.com/people/yourusername" target="_blank"><i class="fab fa-zhihu"></i></a>
             <!-- 添加其他社交链接 -->
             <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
             <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
