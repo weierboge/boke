@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: 关于我
 subtitle: 
 date:  
