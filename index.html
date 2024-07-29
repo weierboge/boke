@@ -9,7 +9,7 @@ title: 韦二伯格的博客
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ site.title }}</title>
-    <style>
+      <style>
         body, html {
             margin: 0;
             padding: 0;
@@ -65,9 +65,22 @@ title: 韦二伯格的博客
         .archive-year {
             font-weight: bold;
         }
-        .post-list, .post-meta, .post-title, .footer {
-            justify-content: center;
-            /* 其他样式规则 */
+        .post-list {
+            list-style: none;
+            padding: 0;
+        }
+        .post-title {
+            margin-bottom: 5px;
+        }
+        .post-meta {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .footer {
+            text-align: center; /* 确保页脚内容居中 */
+            padding: 20px 0;
+            background: #f8f8f8;
+            border-top: 1px solid #eee;
         }
     </style>
 </head>
@@ -105,6 +118,7 @@ title: 韦二伯格的博客
                 <ul class="archive-list">
                     {% assign postsByYearMonth = site.posts | group_by: 'date' | sort: 'date' %}
                     {% for yearMonth in postsByYearMonth %}
+                    <li><a href="{{ '/achieve.html' | relative_url }}">查看归档</a></li> <!-- 归档链接 -->
                         <li class="archive-year">{{ yearMonth.date | date: "%Y" }}</li>
                         <ul>
                             {% assign postsByMonth = yearMonth.items | group_by: 'date' | sort: 'date' %}
