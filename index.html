@@ -104,10 +104,7 @@ title: 韦二伯格的博客
             </div>
             <!-- 将摘要也包裹在超链接中 -->
             <p class="post-excerpt">
-                <a href="{{ post.url }}">
-                    {{ post.excerpt | strip_html }}
-                        <p>{{ post.excerpt | strip_html }}</p>
-                        <a href="{{ post.url }}">阅读更多...</a>
+                <a href="{{ post.url }}">阅读更多...</a>
                     </article>
                 </li>
                 {% endfor %}
