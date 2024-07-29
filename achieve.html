@@ -16,6 +16,9 @@ title: 归档
             font-family: 'Arial', sans-serif;
             background: #fff;
             color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         header {
             background: #fff;
@@ -40,6 +43,7 @@ title: 归档
             width: 80%;
             max-width: 800px;
             margin: 20px auto;
+            flex: 1; /* 占据除页头和页脚外的剩余空间 */
         }
         .archive-list {
             list-style: none;
@@ -56,14 +60,10 @@ title: 归档
             font-size: 1em;
         }
         footer {
-             width: 100%;
-            text-align: center; /* 确保页脚内容居中 */
+            text-align: center;
             padding: 20px 0;
             background: #f8f8f8;
             border-top: 1px solid #eee;
-            position: absolute; /* 绝对定位确保在页面底部居中 */
-            bottom: 0;
-            left: 0;
         }
         footer p {
             margin: 0;
@@ -72,7 +72,7 @@ title: 归档
 </head>
 <body>
     <header>
-        <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a> | 归档</h1>
+        <h1>{{ site.title }} | 归档</h1> <!-- 归档页面标题 -->
         <nav>
             <a href="{{ '/' | relative_url }}">主页</a>
             <a href="{{ '/about.html' | relative_url }}">关于我</a>
