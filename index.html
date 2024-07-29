@@ -10,53 +10,61 @@ title: 韦二伯格的博客
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ site.title }}</title>
         <style>
-        body, html {
+         body, html {
             margin: 0;
             padding: 0;
             font-family: 'Arial', sans-serif;
             background: #fff;
             color: #333;
-            height: 100%; /* 确保整个视窗高度 */
+            min-height: 100vh; /* 确保至少为视窗高度 */
             display: flex;
             flex-direction: column; /* 页面内容为一列 */
         }
-        header, main, footer {
-            flex: 1; /* 弹性伸缩 */
-            display: flex;
-            justify-content: center; /* 水平居中 */
-            align-items: center; /* 垂直居中 */
-        }
         header {
-            flex: 2; /* 页头稍微大一些 */
             background: #fff;
             border-bottom: 1px solid #eee;
+            padding: 10px 0;
         }
-        nav ul {
-            list-style: none;
+        header h1 {
+            text-align: center;
+            margin: 0;
+        }
+        nav {
             display: flex;
             justify-content: space-around;
-            padding: 0;
-        }
-        nav li {
-            padding: 0 15px;
+            padding: 10px 0;
         }
         nav a {
             text-decoration: none;
             color: #333;
+            padding: 0 15px;
         }
-        main {
-            flex: 10; /* 主内容区域占据大部分空间 */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px auto;
+            max-width: 1200px;
+            flex: 1; /* 占据除页头和页脚外的剩余空间 */
         }
-        main h2 {
-            text-align: center;
+        .main-content {
+            flex: 1 0 60%; /* 占据主要空间，但至少60% */
+            padding: 0 15px;
         }
-        .social-icons a {
-            margin: 0 10px;
-            color: #333; /* 图标颜色 */
-            font-size: 36px; /* 增加图标大小 */
+        .sidebar {
+            flex: 0 1 30%; /* 占据次要空间，但至少30% */
+            padding: 0 15px;
+            box-sizing: border-box;
         }
-        .social-icons a:hover {
-            color: #666; /* 鼠标悬停时图标颜色 */
+        .archive-list {
+            list-style: none;
+            padding: 0;
+            font-size: 0.9em;
+        }
+        .archive-list li {
+            margin-bottom: 5px;
+        }
+        .archive-year {
+            font-weight: bold;
         }
         .footer {
             flex: 1; /* 页脚占据一定空间 */
