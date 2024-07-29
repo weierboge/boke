@@ -89,8 +89,7 @@ title: 韦二伯格的博客
             <ul class="post-list">
                 {% for post in site.posts %}
                 <li>
-                    <article>
-                        <h2 class="post-title">{{ post.title }}</h2>
+                    <article
                         <div class="post-meta">
                             <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
                             by {{ post.author }}
