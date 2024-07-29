@@ -13,17 +13,12 @@ permalink: /about.html/
 如果您对我的创作感兴趣，欢迎通过我的主页签名上的方式联系我，进行合作。
 
 ##
-</p>
-        <div class="social-icons">
-            <a href="https://www.zhihu.com/people/wei-shi-bo" target="_blank"><i class="fab fa-zhihu"></i></a>
-            <!-- 添加其他社交链接 -->
-            <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
-            <!-- 更多图标 -->
-        </div>
-    </main>
-    <footer class="footer">
-        <p>&copy; 2024 韦二伯格 · 版权所有</p>
-    </footer>
-</body>
-</html>
+
+##
+
+##
+<center>2024 韦二伯格 · 版权所有</center>
+
+ 
+ 
+
