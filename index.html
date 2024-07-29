@@ -4,31 +4,46 @@ title: 韦二伯格的博客
 ---
 
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh" itemscope itemtype="http://schema.org/Blog">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ site.title }}</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: white;
-            color: #333;
-            margin: 0;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             padding: 0;
-        }
-        .container {
-            width: 80%;
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
+            margin: 0;
+            background: #fff;
+            color: #333;
         }
         header {
-            text-align: center;
+            background: #303030;
+            color: #fff;
             padding: 20px 0;
         }
         header h1 {
             margin: 0;
+            padding: 0 20px;
+            font-size: 2em;
+        }
+        header nav ul {
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+        header nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .container {
+            width: 80%;
+            max-width: 900px;
+            margin: 40px auto;
         }
         .post-list {
             list-style: none;
@@ -37,55 +52,66 @@ title: 韦二伯格的博客
         .post-list li {
             margin-bottom: 40px;
         }
-        .post-title {
-            font-size: 2em;
-            margin-bottom: 10px;
+        .post-list a {
+            text-decoration: none;
+            color: #333;
+        }
+        .post-list h2 {
+            margin: 0;
         }
         .post-meta {
             color: #888;
             font-size: 0.9em;
-            margin-bottom: 20px;
-        }
-        .post-excerpt {
-            text-align: justify;
-        }
-        .read-more {
-            text-align: right;
-            margin-top: 10px;
         }
         footer {
             text-align: center;
             padding: 20px 0;
-            background-color: #f8f8f8;
-            border-top: 1px solid #eee;
+            background: #303030;
+            color: #fff;
+        }
+        footer p {
+            margin: 0;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
-      </header>
-    <main class="container">
+    <header>
+        <h1 itemprop="name">{{ site.title }}</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ '/' | relative_url }}">主页</a></li>
+                <li><a href="{{ '/archive.html' | relative_url }}">归档</a></li>
+                <li><a href="{{ '/about.html' | relative_url }}">关于我</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
         <ul class="post-list">
             {% for post in site.posts %}
                 <li>
-                    <article>
-                        <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-                        <div class="post-meta">
-                            Posted on {{ post.date | date: "%B %e, %Y" }} by {{ post.author }}
-                        </div>
-                        <div class="post-excerpt">
-                            {{ post.excerpt | strip_html }}
-                        </div>
-                        <div class="read-more">
-                            <a href="{{ post.url }}">阅读更多</a>
-                        </div>
+                    <article itemscope itemtype="http://schema.org/BlogPosting">
+                        <h2 class="post-list__post-title" itemprop="headline"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                        <p class="post-meta">
+                            <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time>
+                            by 
+                            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                                <span itemprop="name">{{ post.author }}</span>
+                            </span>
+                        </p>
+                        <p itemprop="description">{{ post.excerpt | strip_html }}</p>
+                        <a href="{{ post.url }}">阅读更多...</a>
                     </article>
                 </li>
             {% endfor %}
         </ul>
-    </main>
-    <footer class="container">
-        <p>版权所有 &copy; {{ site.time | date: '%Y' }} 韦二伯格. 保留所有权利。</p>
-        <!-- 网站编辑超链接 -->
-        <p><a href="https://github.com/weierboge/weierboge.github.io">编辑此网站</a></p>
+    </div>
+    <footer>
+        <p>版权所有 &copy; {{ site.time | date: '%Y' }} 韦二伯格</p>
+        <p><a href="https://github.com/weierboge/weierboge.github.io">在GitHub上编辑此网站</a></p>
     </footer>
 </body>
+</html>
