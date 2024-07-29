@@ -1,0 +1,39 @@
+---
+layout: default
+title: 归档
+---
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <!-- 引入相同的样式 -->
+</head>
+<body>
+    <header class="container">
+        <h1>{{ site.title }}</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ '/' | relative_url }}">主页</a></li>
+                <li><a href="{{ '/archive.html' | relative_url }}">归档</a></li>
+                <li><a href="{{ '/about.html' | relative_url }}">关于我</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <h2>归档</h2>
+        <ul>
+            {% for post in site.posts %}
+                <li>
+                    <a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%Y-%m-%d" }}
+                </li>
+            {% endfor %}
+        </ul>
+    </main>
+    <footer class="container">
+        <!-- 相同的页脚 -->
+    </footer>
+</body>
+</html>
