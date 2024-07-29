@@ -10,35 +10,40 @@ title: 韦二伯格的博客
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ site.title }}</title>
     <style>
-        body {
+        body, h1, h2, h3, h4, h5, h6 {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            padding: 0;
-            margin: 0;
+        }
+        body {
             background: #fff;
             color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
         }
         header {
-            background: #303030;
-            color: #fff;
+            background: #fff;
+            border-bottom: 1px solid #eee;
             padding: 20px 0;
         }
         header h1 {
+            text-align: center;
             margin: 0;
-            padding: 0 20px;
-            font-size: 2em;
         }
-        header nav ul {
-            padding: 0;
+        nav {
+            margin: 20px 0;
+        }
+        nav ul {
             list-style: none;
+            padding: 0;
             text-align: center;
         }
-        header nav ul li {
-            display: inline;
+        nav ul li {
+            display: inline-block;
             margin: 0 10px;
         }
-        header nav a {
-            color: #fff;
+        nav a {
             text-decoration: none;
+            color: #333;
         }
         .container {
             width: 80%;
@@ -66,15 +71,11 @@ title: 韦二伯格的博客
         footer {
             text-align: center;
             padding: 20px 0;
-            background: #303030;
-            color: #fff;
+            background: #fff;
+            border-top: 1px solid #eee;
         }
         footer p {
             margin: 0;
-        }
-        footer a {
-            color: #fff;
-            text-decoration: none;
         }
     </style>
 </head>
@@ -96,7 +97,7 @@ title: 韦二伯格的博客
                     <article itemscope itemtype="http://schema.org/BlogPosting">
                         <h2 class="post-list__post-title" itemprop="headline"><a href="{{ post.url }}">{{ post.title }}</a></h2>
                         <p class="post-meta">
-                            <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time>
+                            <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%Y-%m-%d" }}</time>
                             by 
                             <span itemprop="author" itemscope itemtype="http://schema.org/Person">
                                 <span itemprop="name">{{ post.author }}</span>
@@ -110,8 +111,7 @@ title: 韦二伯格的博客
         </ul>
     </div>
     <footer>
-        <p>版权所有 &copy; {{ site.time | date: '%Y' }} 韦二伯格</p>
-        <p><a href="https://github.com/weierboge/weierboge.github.io">在GitHub上编辑此网站</a></p>
+        <p>&copy; 2024 韦二伯格 · 版权所有 | <a href="https://github.com/weierboge/weierboge.github.io">编辑网站</a></p>
     </footer>
 </body>
 </html>
