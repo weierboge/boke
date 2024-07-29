@@ -1,0 +1,92 @@
+---
+layout: default
+title: 韦二伯格的博客
+---
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.title }}</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: white;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .post-list {
+            list-style: none;
+            padding: 0;
+        }
+        .post-list li {
+            margin-bottom: 40px;
+        }
+        .post-title {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .post-meta {
+            color: #888;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+        .post-excerpt {
+            text-align: justify;
+        }
+        .read-more {
+            text-align: right;
+            margin-top: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #f8f8f8;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <header class="container">
+        <h1>{{ site.title }}</h1>
+    </header>
+    <main class="container">
+        <ul class="post-list">
+            {% for post in site.posts %}
+                <li>
+                    <article>
+                        <h2 class="post-title">{{ post.title }}</h2>
+                        <div class="post-meta">
+                            Posted on {{ post.date | date: "%B %e, %Y" }} by {{ post.author }}
+                        </div>
+                        <div class="post-excerpt">
+                            {{ post.excerpt | strip_html }}
+                        </div>
+                        <div class="read-more">
+                            <a href="{{ post.url }}">Read More</a>
+                        </div>
+                    </article>
+                </li>
+            {% endfor %}
+        </ul>
+    </main>
+    <footer class="container">
+        <p>版权所有 &copy; {{ site.time | date: '%Y' }} 韦二伯格. 保留所有权利。</p>
+    </footer>
+</body>
+</html>
