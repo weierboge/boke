@@ -87,13 +87,25 @@ title: 韦二伯格的博客
         <div class="main-content">
             <!-- 主内容区域，显示文章列表 -->
             <ul class="post-list">
-                {% for post in site.posts %}
-                <li>
-                    <article
-                        <div class="post-meta">
-                            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
-                            by {{ post.author }}
-                        </div>
+    {% for post in site.posts %}
+    <li>
+        <article>
+            <!-- 将标题包裹在超链接中 -->
+            <h2 class="post-title">
+                <a href="{{ post.url }}">
+                    {{ post.title }}
+                </a>
+            </h2>
+            <div class="post-meta">
+                <time datetime="{{ post.date | date_to_xmlschema }}">
+                    {{ post.date | date: "%Y-%m-%d" }}
+                </time>
+                by {{ post.author }}
+            </div>
+            <!-- 将摘要也包裹在超链接中 -->
+            <p class="post-excerpt">
+                <a href="{{ post.url }}">
+                    {{ post.excerpt | strip_html }}
                         <p>{{ post.excerpt | strip_html }}</p>
                         <a href="{{ post.url }}">阅读更多...</a>
                     </article>
