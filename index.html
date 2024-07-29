@@ -118,7 +118,6 @@ title: 韦二伯格的博客
                 <ul class="archive-list">
                     {% assign postsByYearMonth = site.posts | group_by: 'date' | sort: 'date' %}
                     {% for yearMonth in postsByYearMonth %}
-                    <li><a href="{{ '/achieve.html' | relative_url }}">查看归档</a></li> <!-- 归档链接 -->
                         <li class="archive-year">{{ yearMonth.date | date: "%Y" }}</li>
                         <ul>
                             {% assign postsByMonth = yearMonth.items | group_by: 'date' | sort: 'date' %}
