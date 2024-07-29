@@ -1,0 +1,41 @@
+---
+layout: default
+title: 关于我
+---
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <!-- 引入相同的样式 -->
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<body>
+    <header class="container">
+        <h1>{{ site.title }}</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ '/' | relative_url }}">主页</a></li>
+                <li><a href="{{ '/archive.html' | relative_url }}">归档</a></li>
+                <li><a href="{{ '/about.html' | relative_url }}">关于我</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <h2>关于我</h2>
+        <p>这里是关于我的一些信息。你可以添加一些个人简介、兴趣、爱好等。</p>
+<div class="social-icons">
+    <a href="https://www.zhihu.com/people/yourusername" target="_blank"><i class="fab fa-zhihu"></i></a>
+    <!-- 添加其他社交链接 -->
+    <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+    <!-- 更多图标 -->
+</div>
+    </main>
+    <footer class="container">
+        <!-- 相同的页脚 -->
+    </footer>
+</body>
+</html>
