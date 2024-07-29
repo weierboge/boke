@@ -10,71 +10,53 @@ title: 韦二伯格的博客
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ site.title }}</title>
         <style>
-         body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            background: #fff;
-            color: #333;
-            min-height: 100vh; /* 确保至少为视窗高度 */
-            display: flex;
-            flex-direction: column; /* 页面内容为一列 */
-        }
-        header {
-            background: #fff;
-            border-bottom: 1px solid #eee;
-            padding: 10px 0;
-        }
-        header h1 {
-            text-align: center;
-            margin: 0;
-        }
-        nav {
-            display: flex;
-            justify-content: space-around;
-            padding: 10px 0;
-        }
-        nav a {
-            text-decoration: none;
-            color: #333;
-            padding: 0 15px;
-        }
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 20px auto;
-            max-width: 1200px;
-            flex: 1; /* 占据除页头和页脚外的剩余空间 */
-        }
-        .main-content {
-            flex: 1 0 60%; /* 占据主要空间，但至少60% */
-            padding: 0 15px;
-        }
-        .sidebar {
-            flex: 0 1 30%; /* 占据次要空间，但至少30% */
-            padding: 0 15px;
-            box-sizing: border-box;
-        }
-        .archive-list {
-            list-style: none;
-            padding: 0;
-            font-size: 0.9em;
-        }
-        .archive-list li {
-            margin-bottom: 5px;
-        }
-        .archive-year {
-            font-weight: bold;
-        }
-        .footer {
-            background: #f8f8f8;
-            border-top: 1px solid #eee;
-            text-align: center;
-            padding: 20px 0;
-            flex-shrink: 0;
-        }
-    </style>
-</head>
+         /* 基础样式 */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* 侧边栏和内容样式 */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.sidebar {
+    flex: 1; /* 侧边栏宽度 */
+    margin-right: 20px; /* 与内容区域的间隔 */
+}
+
+.content {
+    flex: 3; /* 内容区域宽度 */
+}
+
+/* 页脚样式 */
+footer {
+    background: #f8f8f8;
+    border-top: 1px solid #eee;
+    padding: 20px 0;
+    text-align: center; /* 页脚文本居中 */
+}
+
+/* 较大屏幕下页脚居中 */
+@media (min-width: 768px) {
+    footer {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+/* 较小屏幕下页脚适应屏幕宽度 */
+@media (max-width: 767px) {
+    footer {
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
 <body>
     <header>
         <h1>{{ site.title }}</h1>
