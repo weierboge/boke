@@ -1,6 +1,10 @@
 ---
-layout: default
+layout: post
 title: 关于我
+subtitle: 
+date:  
+author:  
+background: 'url(https://example.com/your-background-image.jpg)' # 可选的背景图片
 ---
 
 我是韦二伯格，一名短视频从业者和编导专业人士，喜欢探索最新的科技数码产品和各种新鲜事物。
