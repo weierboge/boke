@@ -127,6 +127,42 @@ title: 韦二伯格的博客
             width: 100%;
             flex-shrink: 0; /* 防止页脚在flex布局中缩小 */
         }
+            /* 响应式设计：手机和平板自适应 */
+@media (max-width: 1024px) {
+    body, html {
+        flex-direction: column;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .main-content, .sidebar {
+        width: 100%; /* 确保在小屏幕上主内容和侧边栏宽度为100% */
+        padding: 10px; /* 根据需要调整内边距 */
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav a {
+        margin-bottom: 10px; /* 导航链接之间增加间距 */
+    }
+    .archive-list {
+        padding-left: 20px; /* 归档列表的内边距调整 */
+    }
+}
+
+/* 针对超小屏幕（如某些手机）的额外调整 */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 24px; /* 减小标题字体大小 */
+    }
+    nav a {
+        padding: 5px; /* 减小导航链接的内边距 */
+    }
+    .archive-list {
+        padding-left: 10px; /* 进一步减小归档列表的内边距 */
+    }
+}
     </style>
 </head>
 <body>
