@@ -16,7 +16,7 @@ permalink: /about.html/
 
 这是我的知乎主页：[@韦二伯格](https://www.zhihu.com/people/wei-shi-bo)
 
-我通过GitHub和 New bing 打造了几个免费的小工具：
+我通过GitHub和AI助手打造了几个免费的小工具：
 
 1.[红书帮-小红书一键添加emoji表情](https://www.hongshubang.com)  :一键把你的文案转换为带有emoji表情的小红书格式
 
