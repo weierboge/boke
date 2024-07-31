@@ -162,6 +162,46 @@ title: 韦二伯格的博客
         flex: 1; /* 侧边栏占据较少空间 */
     }
 }
+            /* 响应式设计：针对主页的自适应调整 */
+
+/* 针对手机屏幕（宽度小于768px） */
+@media (max-width: 767px) {
+    /* 调整主页的导航链接 */
+    nav a {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    /* 调整主页的文章列表，使其垂直排列 */
+    .post-list li {
+        width: 100%;
+        margin-bottom: 20px; /* 根据需要调整间距 */
+    }
+
+    /* 如果主页有侧边栏，可以在这里调整 */
+    .sidebar {
+        width: 100%;
+    }
+
+    /* 调整页脚内容 */
+    .footer p {
+        text-align: center;
+    }
+}
+
+/* 针对平板屏幕（宽度在768px到1024px之间） */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* 根据需要调整主页的布局和样式 */
+    .post-list li {
+        /* 例如，可以设置为两列显示 */
+        width: 49%;
+        float: left;
+        margin-right: 2%;
+    }
+    .post-list li:nth-child(2n) {
+        margin-right: 0;
+    }
+}
     </style>
 </head>
 <body>
