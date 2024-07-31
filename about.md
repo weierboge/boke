@@ -14,6 +14,14 @@ permalink: /about.html/
 如果您对我的创作感兴趣，欢迎通过我的主页签名上的方式联系我，进行合作。
 
 
+这是我的知乎主页：[@韦二伯格](https://www.zhihu.com/people/wei-shi-bo)
+
+我通过GitHub和 New bing 打造了几个免费的小工具：
+
+1.[红书帮-小红书一键添加emoji表情](https://www.hongshubang.com)  :一键把你的文案转换为带有emoji表情的小红书格式
+
+2.[在线字数统计](https://zishutongji.com/) ：一个简单的字数统计小工具
+
 
 
 ***
