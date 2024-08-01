@@ -7,7 +7,7 @@ title: 韦二伯格的博客
 <html lang="zh" itemscope itemtype="http://schema.org/Blog">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
         <style>
         body, html {
             margin: 0;
@@ -131,6 +131,14 @@ title: 韦二伯格的博客
 
 /* 针对手机屏幕（宽度小于768px） */
 @media (max-width: 767px) {
+    .sidebar {
+        width: 100%; /* 在手机屏幕上，侧边栏宽度占满 */
+        padding: 10px; /* 调整内边距 */
+        box-sizing: border-box; /* 边框计算在宽度内 */
+    }
+    /* 可能需要隐藏侧边栏或以其他方式展示 */
+}
+            @media (max-width: 767px) {
     body, html {
         flex-direction: column;
     }
