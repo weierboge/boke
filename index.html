@@ -115,18 +115,20 @@ title: 韦二伯格的博客
         .archive-year {
             font-weight: bold;
         }
-        .footer {
-            padding: 20px 0;
-            background: #f8f8f8;
-            border-top: 1px solid #eee;
-            text-align: center; /* 确保页脚内容居中 */
-            margin-top: auto;
-        }
-        /* 确保页脚始终在页面底部居中 */
-        .footer {
-            width: 100%;
-            flex-shrink: 0; /* 防止页脚在flex布局中缩小 */
-        }
+        /* 确保页脚内容在所有屏幕尺寸上都居中 */
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #f8f8f8;
+    border-top: 1px solid #eee;
+}
+
+/* 如果页脚包含块级元素，确保它们也居中 */
+.footer p, .footer div {
+    text-align: center;
+    margin: 0 auto; /* 居中块级元素 */
+    display: inline-block; /* 允许设置水平margin */
+}
             /* 响应式设计：针对手机和平板的屏幕宽度进行调整 */
 
 /* 针对手机屏幕（宽度小于768px） */
@@ -269,7 +271,9 @@ title: 韦二伯格的博客
         </div>
     </div>
     <footer>
-        <p>&copy; 2024 韦二伯格 · 版权所有 | <a href="https://github.com/weierboge/weierboge.github.io">编辑网站</a></p>
-    </footer>
+    <p>&copy; 2024 韦二伯格 · 版权所有 | 
+        <a href="https://github.com/weierboge/weierboge.github.io">编辑网站</a>
+    </p>
+</footer>
 </body>
 </html>
